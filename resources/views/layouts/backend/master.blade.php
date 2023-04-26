@@ -22,7 +22,8 @@
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="logo">
                             <a href="/">
-                                <img src="{{ asset('fe/img/Loga A.png') }}" alt="Logo" srcset="" width="90" height="100" >
+                                <img src="{{ asset('fe/img/Loga A.png') }}" alt="Logo" srcset="" width="90"
+                                    height="100">
                             </a>
                         </div>
                         <div class="theme-toggle d-flex gap-2  align-items-center mt-2">
@@ -93,8 +94,10 @@
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-end shadow-lg"
                                     aria-labelledby="topbarUserDropdown" style="">
-                                    <li><a class="dropdown-item" href="#">My Account</a></li>
-                                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                                    <li><a class="dropdown-item" href="{{ route('admin.profile') }}">My Account</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="{{ route('admin.password') }}">CHange
+                                            Password</a></li>
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>

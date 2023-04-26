@@ -49,6 +49,12 @@ Route::prefix('admin')->middleware('auth')->group(function () {
     });
 
     Route::get('jadwal', [App\Http\Controllers\Admin\JadwalController::class, 'index'])->name('admin.jadwal');
+
+    Route::get('profile', [App\Http\Controllers\Admin\ProfileController::class, 'profile'])->name('admin.profile');
+    Route::post('profile', [App\Http\Controllers\Admin\ProfileController::class, 'profile_update'])->name('admin.profile.update');
+
+    Route::get('profile/change-password', [App\Http\Controllers\Admin\ProfileController::class, 'sandi'])->name('admin.password');
+    Route::post('profile/change-password', [App\Http\Controllers\Admin\ProfileController::class, 'sandi_update'])->name('admin.password.update');
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
