@@ -9,6 +9,13 @@
             </a>
         </li>
 
+        <li class="sidebar-item {{ request()->is('admin/user*') ? 'active' : '' }}">
+            <a href="{{ route('admin.user.index') }}" class='sidebar-link'>
+                <i class="bi bi-people-fill"></i>
+                <span>User Management</span>
+            </a>
+        </li>
+
         <li class="sidebar-title">Kelola Armada</li>
 
         <li class="sidebar-item {{ request()->is('admin/armada') ? 'active' : '' }}">

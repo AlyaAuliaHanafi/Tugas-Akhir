@@ -35,6 +35,11 @@ Route::prefix('admin')->middleware('auth')->group(function () {
         'only' => ['index', 'edit', 'store', 'destroy', 'create', 'update']
     ]);
 
+    Route::resource('user', App\Http\Controllers\Admin\UserController::class, [
+        'as' => 'admin',
+        'only' => ['index', 'edit', 'store', 'destroy', 'create', 'update']
+    ]);
+
     Route::prefix('order')->group(function () {
         Route::get('', [App\Http\Controllers\Admin\OrderController::class, 'index'])->name('admin.orderan.index');
         Route::get('{inv}', [App\Http\Controllers\Admin\OrderController::class, 'show'])->name('admin.orderan.show');
